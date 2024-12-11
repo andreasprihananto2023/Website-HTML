@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Transformasi Gambar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplikasi Transformasi Gambar</h1>
+        
+        <div class="image-upload-container">
+            <input type="file" id="imageUpload" accept=".jpg, .jpeg, .png">
+            <label for="imageUpload" class="upload-btn">Unggah Gambar</label>
+        </div>
+
+        <div class="transformation-controls">
+            <div class="control-group">
+                <label>Pilih Transformasi:</label>
+                <select id="transformationType">
+                    <option value="translasi">Translasi</option>
+                    <option value="rotasi">Rotasi</option>
+                    <option value="skala">Skala</option>
+                    <option value="distorsi">Distorsi</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Parameter Transformasi</label>
+                <input type="range" id="transformParam1" min="-200" max="200" value="50">
+                <input type="range" id="transformParam2" min="-200" max="200" value="30">
+            </div>
+        </div>
+
+        <div class="image-display">
+            <div class="original-image">
+                <h3>Gambar Asli</h3>
+                <img id="originalImage" src="" alt="Gambar Asli">
+            </div>
+            <div class="transformed-image">
+                <h3>Gambar Transformasi</h3>
+                <img id="transformedImage" src="" alt="Gambar Transformasi">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
